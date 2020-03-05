@@ -9,3 +9,4 @@
 /.psa*
 /.spago
 .xdg_config_home
+dist

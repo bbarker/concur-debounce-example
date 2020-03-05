@@ -1,10 +1,13 @@
 {
-  "name": "concur-debounce-example",
+  "name": "concur-webpack-template",
   "version": "0.0.1",
-  "description": "Debugging debounce",
+  "description": "Template for using Concur with Spago and Webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "spago build",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
     "webpack:server": "webpack-dev-server --progress --inline --hot"
   },
   "repository": {
@@ -19,11 +22,12 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bbarker/concur-debounce-example/issues"
+    "url": "https://github.com/bbarker/concur-webpack-template/issues"
   },
-  "homepage": "https://github.com/bbarker/concur-debounce-example#readme",
+  "homepage": "https://github.com/bbarker/concur-webpack-template#readme",
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
+    "purescript": "0.13.6",
     "purescript-psa": "^0.7.3",
     "purs-loader": "^3.7.1",
     "webpack": "^4.41.6",

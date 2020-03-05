@@ -1,4 +1,4 @@
-module Test.Hello where
+module Main where
 
 import Prelude
 
@@ -6,9 +6,11 @@ import Concur.Core (Widget)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
+import Concur.React.Run (runWidgetInDom)
 import Control.Monad.Rec.Class (forever)
 import Control.Monad.State.Class (get, put)
 import Control.Monad.State.Trans (StateT, runStateT)
+import Effect (Effect)
 
 helloWidget :: forall a. Widget HTML a
 helloWidget = do
@@ -23,3 +25,6 @@ helloWidgetS = forever do
 
 -- Widgety Widget
 data View = View Int HTML
+
+main :: Effect Unit
+main = runWidgetInDom "app" helloWidget
